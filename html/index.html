@@ -1,0 +1,147 @@
+<!-- https://handlebarsjs.com/ -->
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<!-- make title window change automatically by itself. -->
+	<meta charset="utf-8">
+	<title>Portfolio Coursework | Home</title>
+	<meta name="author" content="Michael Peres">
+	<meta name="description" content="My Coureswork Portfolio.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/cookies.css">
+	<link rel="icon" type="image/x-icon" href=""/>
+	<!-- JQuery -->
+	<script
+		src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous">
+	</script>
+	<!-- Double checking if CDN is offline. Failsafe -->
+	<script type=“text/javascript”>
+		window.jQuery ||
+		document.write('<script src=“scripts/jquery-3.6.0.min.js”><\/script>');
+	</script>
+	<!-- End of JQuery -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-653E971FMT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-653E971FMT');
+    </script>
+    <!-- End of Google Analytics -->
+</head>
+
+<body>
+	<noscript><div class="no_js alert_banner">Javascript is not enabled, for the best experience please allow on this website.</div></noscript>
+    <div class="alert_banner">No CSS frameworks or libraries or Javascript has been used. [Coursework 1]</div>
+	<header>
+        <section id="header_nav">
+            <nav>
+                <a href="index.html" class="nav_title_anchor selected">Home</a>
+                <a href="viewBlog.html" class="nav_title_anchor">Blogs</a> 
+                <a href="aboutMe.html" class="nav_title_anchor">About Me</a> 
+                <a href="myProjects.html" class="nav_title_anchor">Projects</a> 
+                <a href="login.html" class="nav_title_anchor">MyAccount</a>
+				<a href="playground.html" class="nav_title_anchor">Playground</a>
+				<a href="shop.php" class="nav_title_anchor">Shop</a>
+				<a href="privacy.html" class="nav_title_anchor">Legal</a>
+            </nav>
+        </section>
+        <section id="header_icon">
+            <nav>
+                <!-- Icons from: https://www.flaticon.com/ -->
+                <a href="https://github.com/makiisthenes"><img src="../github.svg"></a>
+                <a href="https://www.linkedin.com/in/michael-p-88b015200/"><img src="../linkedin.svg"></a>
+                <a href="" id="email_icon"><img src="../email.svg"></a>
+            </nav>
+        </section>
+    </header>
+	
+	
+	<!-- Cookies div -->
+	<div class="dialog bottom left" id="dialog_cookie">
+		<div id="cookie_div">
+			<div id="cookie_notice_top">
+				<img src="../cookie.png" width="calc(30%)"/>
+				<span>We use cookies to ensure that we give you the best experience on our website.<br><a href="privacy.html">Privacy Statement</a></span>
+			</div>
+			<div id="cookie_notice_bottom">
+				<button class="cookie_btn grey" id="decline_cookies">I disagree.</button>
+				<button class="cookie_btn blue" id="accept_cookies">I agree.</button>
+			</div>
+		</div>
+	</div>
+	<!-- End of cookies div -->
+	
+	<main>
+        <!-- Main Markup Block, the rest is replicated in all tabs. -->
+        <section id="main_container">
+            <div id="main_wrapper">
+                <div id="profile_pic_section">
+                    <figure>
+                        <img id="profile_pic" src="../profile.png" alt="my_profile_pic">
+                    </figure>
+                </div>
+                <div id="interact_section">
+                    <h2>Michael Peres</h2>
+                    <div id="main_button_wrapper">
+                        <a href="aboutMe.html">
+                        <button id="main_button">3xplore&#62;&#62;&#62;</button>
+                        </a>
+                    </div>
+                </div>
+				
+            </div>
+        </section>
+        <section id="background">
+        <!-- Background Graphics -->
+            <img id="code_block" src="../Code%20Background.png" width="100%;"/>
+            <img id="blue_card" src="../blue_background.png"/>
+        </section>
+    	<div id="notification_section">
+			<div class="notif">
+				<h5>Notification 1</h5>
+				<span>Check out my latest github repo!</span>
+				<button class="close_btn">Close</button>
+			</div>
+			<div class="notif">
+				<h5>Notification 2</h5>
+				<span>Check out my latest github repo! Check out my latest github repo! </span>
+				<button class="close_btn">Close</button>
+			</div>
+			<div class="notif">
+				<h5>Notification 3</h5>
+				<span>Check out my latest github repo!</span>
+				<button class="close_btn">Close</button>
+			</div>
+		</div>
+		<div id="profile_pic_toggle">
+			<button id="profile_toggle_btn">Change Profile Image >>></button>
+			<div id="profile_status">VIEW: AVATAR</div>
+		</div>
+    </main>
+	<footer>
+        <div id="news_letter">
+            <form id="newsletter_form">
+                <label>Email:</label>
+                <input autocomplete="email" id="newsletter_input" type="email" name="newsletter_email" placeholder="Enter Email for notifications!" required>
+                <input type="submit" value="Send" id="newsletter_submit"/>
+            </form>
+        </div>
+		<!-- Spam Protection from bots JS Script -->
+        <a href="mailto:" id="email_anchor">Email Me >>></a>
+    </footer>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/cookies.js"></script>
+	<script type="text/javascript" src="../js/spamBotPrevention.js"></script>
+	<script type="text/javascript" src="../js/newsletter.js"></script>
+    
+</body>
+
+</html>

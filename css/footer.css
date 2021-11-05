@@ -1,0 +1,89 @@
+/* Footer */
+footer{
+   background-color: black;
+    padding: 25px 0;
+    overflow: auto;
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+	white-space: nowrap;
+    
+}
+ 
+/* Footer Newsletter Elements */
+
+
+#news_letter form{
+	position: relative;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 17px;
+    float: left;
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+	z-index: 50;
+}
+
+footer #newsletter_input{
+	position: relative;
+    border: solid white 1px;
+    background-color: transparent;
+    padding: 10px;
+    margin:  0 20px 0 10px;
+    color: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+    width: 300px;    
+}
+
+footer #newsletter_input:focus{
+   border: solid black 1px;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+}
+
+
+
+footer #newsletter_submit{
+    padding: 11px 15px;
+    background-color: #1D83F6;
+    border: none;
+    color: white;
+    font-family: 'Inconsolata', monospace !important;
+    border-radius: 5px;
+    width: 60px;
+}
+
+footer #newsletter_submit:hover{
+    animation: slideWidth 5s 1;
+    width: 100%;
+    -webkit-animation-name: ShineAnimation;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(.12,.89,.98,.47);
+    background-color: #1D8FFF;
+}
+        
+
+
+/* Email Mail Label */
+footer a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    font-size: 17px;
+    float: right;
+    padding-right: 15px;
+    
+}

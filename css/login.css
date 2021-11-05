@@ -1,0 +1,492 @@
+/* 1085 px width minimum */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+	background-color: white;
+	position: relative;
+}
+
+.selected{
+    opacity: 0.6;
+}
+
+
+/* Header Styling */ 
+header{
+    position: absolute;
+	visibility: visible;
+    top: 0;
+    opacity: 0.95;
+    width: 100%;
+    z-index: 99999;
+	overflow: auto;
+}
+#main_header{
+    background-color: black;
+    padding: 25px 0;
+    overflow: auto;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    z-index: 2;
+}
+section#header_nav a{
+    text-decoration: underline;
+    color: white;
+    padding: 0px 15px;
+    font-size: 17px;
+    float: left;   
+}
+section#header_nav a:hover{
+    opacity: 0.7;
+}
+section#header_nav a:nth-child(1){
+    padding-left: 25px;
+}
+section#header_icon img{
+    height: 18px;
+}
+section#header_icon nav{
+    display: flex;
+    float:right;   
+}
+section#header_icon a{
+    padding: 0px 15px;
+    align-items:baseline;
+    
+}
+section#header_icon a:hover{
+    opacity: 0.7;
+}
+section#header_icon a:nth-child(1){
+    padding-right: 9px;
+}
+
+
+/* Background image */
+#background_image_box{
+	position: absolute;
+	height: 100%;
+	overflow: hidden;	
+}
+#background_image_box img{
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.align{
+	text-align: center;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+
+
+/* Side bars */
+.side_text{
+	position: absolute;
+	height: 100%;
+	width: 30px;
+	background-color: #357458;
+	color: white;
+	font-family: "Inconsolata", monospace;
+	text-transform:uppercase;
+	overflow-y: hidden;
+	z-index: 100;
+}
+
+.text_wrapper{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.vertical_left{
+   transform: rotate(90deg);
+   white-space: nowrap;
+   width: 30px;
+   height: cacl(100%);
+}
+
+.vertical_right{
+   transform: rotate(-90deg);
+   white-space: nowrap;
+   width: 30px;
+   height: cacl(100%);
+	position: fixed;
+	bottom: 0;
+}
+
+/* Cant get the animation to work so leaving the feature... :( */
+.side_text_anim{
+	animation: scrollup 1s linear infinite;
+}
+
+@keyframes scrollup{
+	0% {transform: translateY(0%) rotate(90deg); }
+	100%{transform: translateY(100%) rotate(90deg);}
+}
+
+
+
+
+
+
+
+
+/* Main Content */
+main{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+/* Main Content Box */
+#main_container{
+	width: 90%;
+	height: 55%;
+	background-color: transparent;
+	align-self: center;
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-columns: 3;
+	grid-auto-rows:1;
+}
+
+/* Grid items */
+form#login_form{
+	grid-column-start: 1;
+  	grid-column-end: 2;
+}
+
+
+/* Login container */
+#login{
+	padding:20px 20px 0 20px;
+	border-right: solid 2px black;
+	border-radius:1px;
+	position: relative;
+	height: 100%;
+	background-color: transparent;
+}
+
+
+#login_box{
+	width: 100%;
+	float: top;
+}
+
+#login_title, #register_title{
+	align-self: flex-start;
+	margin-bottom: 30px;
+	font-family: "Heebo", sans-serif !important;
+	font-size: 2.5em;
+	color: black;
+	font-weight: 500;
+	position: relative;
+	right: 10px;
+}
+
+.login_input{
+	flex-grow: 1;
+	align-self: flex-start;
+}
+
+.action_span{
+	font-family: "Heebo", sans-serif !important;
+	font-size: 1.2em;
+	color: black;
+	font-weight: 600;
+	margin-bottom: 2px;
+	float: left;
+	
+}
+
+
+.black_input_box{
+	padding: 0 0;
+	background-color: black;
+	width: 90%;
+	display: block;
+	outline: none;
+	border: none;
+	color: white;
+	margin-bottom: 20px;
+	display: flex;
+	align-items:center;
+	justify-content: flex-start;
+}
+
+.black_input{
+	float: left;
+	padding: 14px 10px;
+	background-color: black;
+	width: 100%;
+	display: block;
+	outline: none;
+	border: none;
+	color: white;
+	font-family: "Inconsolata", monospace !important;
+	font-size: 1em;
+}
+.black_input:invalid{
+	outline: none;
+	box-shadow: none;
+}
+
+.action_box{
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: 15%;
+}
+
+.action_button{
+	text-align: center;
+	width: 90%;
+	padding: 10px 14px;
+	display: block;
+	outline: none;
+	border: none;
+	background-color: #357458;
+	color: white;
+	border-radius: 5px;
+	font-family: "Heebo", sans-serif !important;
+	font-size: 1.2em;
+	font-weight: 600;
+	
+}
+
+.action_button:disabled{
+	background-color: #CCE7DB;
+	opacity: 1.0;
+}
+
+.action_button:hover:enabled{
+	background-color: #357458;
+	opacity: 0.9;
+}
+
+.action_button:active:enabled{
+	background-color: #357458;
+	opacity: 1.0;
+}
+
+.status_error{
+	margin-top: 3px;
+	color: red;
+	opacity: 0.7;
+	font-size: 0.7em;
+	font-weight: 600;
+	width: 90%;
+
+}
+
+.hidden{
+	visibility: hidden;
+}
+
+
+#register_form{
+	grid-column-start: 2;
+  	grid-column-end: 4;
+}
+
+
+#register{
+	border-left: solid 2px black;
+	border-radius:1px;
+	width: 100%;
+	height: 100%;
+	padding: 20px 0px 0px 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+}
+
+
+#register>#reg_col1{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	flex-basis: auto;
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	align-self: flex-start;
+}
+
+.register_input{
+	flex-direction: row;
+	align-self: flex-start;
+	width: 80%;
+}
+
+.register_input_box{
+	padding: 0 0;
+	background-color: transparent;
+	width: 90%;
+	display: block;
+	outline: none;
+	border: none;
+	/* border-bottom: solid 3px #CCE7DB; */
+	border-bottom: solid 4px #357458;
+	color: white;
+	margin-bottom: 20px;
+	display: flex;
+	align-items:center;
+	justify-content: flex-start;
+	position: relative;
+	bottom: 4px;
+}
+
+
+.register_input_box:active, .register_input_box:focus{
+	/* border-bottom: solid 3px #357458; */
+}
+
+.register_box{
+	float: left;
+	padding: 14px 10px;
+	/* background-color: rgba(255,255,255, 0.7); */
+	background-color: transparent;
+	width: 100%;
+	display: block;
+	outline: none;
+	border: none;
+	color: black;
+	font-family: "Inconsolata", monospace !important;
+	font-size: 1em;
+	
+}
+
+.register_box:active, .register_box:focus{
+	background-color: rgba(255,255,255, 0.9);
+	
+}
+
+.register_box:invalid{
+	outline: none;
+	box-shadow: none;
+}
+
+
+#register>#reg_col2{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	flex-basis: auto;
+	background-color: transparent;
+	flex-grow: 1;
+	align-self: flex-start;
+	flex-direction: column;
+}
+
+
+.black_input:disabled{
+	opacity: 0.2;
+}
+
+register_box:disabled{
+	
+}
+
+
+/* Footer */
+footer{
+   	background-color: black;
+    padding: 25px 0;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    z-index: 99999999;
+}
+
+/* Footer Newsletter Elements */
+
+
+#news_letter form{
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 17px;
+    float: left;
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+footer #newsletter_input{
+    border: solid white 1px;
+    background-color: transparent;
+    padding: 10px;
+    margin:  0 20px 0 10px;
+    color: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+    width: 300px;    
+}
+
+footer #newsletter_input:focus{
+   border: solid black 1px;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+}
+
+
+
+footer #newsletter_submit{
+    padding: 11px 15px;
+    background-color: #1D83F6;
+    border: none;
+    color: white;
+    font-family: 'Inconsolata', monospace !important;
+    border-radius: 5px;
+    width: 60px;
+}
+
+footer #newsletter_submit:hover{
+    animation: slideWidth 5s 1;
+    width: 100%;
+    -webkit-animation-name: ShineAnimation;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(.12,.89,.98,.47);
+    background-color: #1D8FFF;
+}
+        
+
+
+/* Email Mail Label */
+footer a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    font-size: 17px;
+    float: right;
+    padding-right: 15px;
+    
+}
+

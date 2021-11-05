@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<meta charset="utf-8">
+	<title>Portfolio Coursework | Blogs</title>
+	<meta name="author" content="Michael Peres">
+	<meta name="description" content="My Coureswork Portfolio.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/cookies.css">
+	<script type="text/javascript" src="../js/cookies.js"></script>
+    <link rel="stylesheet" href="../css/viewBlog.css">
+	<link rel="icon" type="image/x-icon" href=""/>
+	<!-- JQuery -->
+	<script
+		src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous">
+	</script>
+	<!-- End of JQuery -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-653E971FMT"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-653E971FMT');
+    </script>
+    <!-- End of Google Analytics -->
+	<!-- Underscore.js -->
+	<script src="https://cdn.jsdelivr.net/npm/underscore@1.12.1/underscore-min.js"></script>
+	<!-- End of Underscore.js -->
+</head>
+
+<body>
+    <header>
+            <div id="main_header">
+                <section id="header_nav">
+                    <nav>
+                        <a href="index.html" class="nav_title_anchor ">Home</a>
+                        <a href="viewBlog.html" class="nav_title_anchor selected">Blogs</a> 
+                        <a href="aboutMe.html" class="nav_title_anchor">About Me</a> 
+                        <a href="myProjects.html" class="nav_title_anchor">Projects</a> 
+                        <a href="login.html" class="nav_title_anchor">MyAccount</a>
+						<a href="playground.html" class="nav_title_anchor">Playground</a>
+						<a href="store.html" class="nav_title_anchor">Shop</a>
+						<a href="privacy.html" class="nav_title_anchor">Legal</a>
+                        
+                    </nav>
+                </section>
+                <section id="header_icon">
+                    <nav>
+                        <!-- Icons from: https://www.flaticon.com/ -->
+                        <a href="https://github.com/makiisthenes"><img src="../github.svg"></a>
+                        <a href="https://www.linkedin.com/in/michael-p-88b015200/"><img src="../linkedin.svg"></a>
+                        <a href="mailto:ec20433@qmul.ac.uk"><img src="../email.svg"></a>
+                    </nav>
+                </section>
+            </div>
+            <section id="title_panel">
+                <h4>Blog</h4>
+                <input id="blogSearchInput" type="text" placeholder="Search Blog..." name="blogSearchQuery" pattern="[a-zA-Z0-9]+" list="blog_suggest" maxlength="35">
+				<datalist id="blog_suggest">
+					<option class="blog_option" value="Example Selection Blog"></option>
+				</datalist>
+                <!-- No button, actively search field instead -->
+                
+                <button class="blue_btn" id="sign_in">Sign In</button>
+                <div id="profile_mask">
+                    <img src="#" alt="Profile Pic"/>
+                </div>
+            </section>
+    </header>
+    <!-- Cookies div -->
+	<div class="dialog bottom left" id="dialog_cookie">
+		<div id="cookie_div">
+			<div id="cookie_notice_top">
+				<img src="../cookie.png" width="calc(30%)"/>
+				<span>We use cookies to ensure that we give you the best experience on our website.<br><a href="privacy.html">Privacy Statement</a></span>
+			</div>
+			<div id="cookie_notice_bottom">
+				<button class="cookie_btn grey" id="decline_cookies">I disagree.</button>
+				<button class="cookie_btn blue" id="accept_cookies">I agree.</button>
+			</div>
+		</div>
+	</div>
+	<!-- End of cookies div -->
+    <main>
+        <!-- Main Content Here -->
+        <section id="main_content">
+            <div class="top_blogs_container">
+                
+                
+                <div class="top_blog_container">
+                    <div class="top_blog_container_top_wrapper">
+                        <figure class="top_blog_container_top_wrapper_figure">
+                            <img src="../aboutMe_rsr/example_blog_img@2x.png" rel="nofollow">
+                            <div class="top_blog_container_top_wrapper_caption_wrapper">
+                                <figcaption>Simple Image Description Source:</figcaption>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="top_blog_container_bottom_wrapper">
+                        
+                            <hgroup class="top_blog_container_bottom_wrapper_header">
+                                <h3>Header Name 1 testing omg this is the title lol</h3>
+                            </hgroup>
+                            <!-- Article Content [Send 300 words].-->
+                            <div class="blur_effect_box">
+                                <blockquote>
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                    
+                                </blockquote>
+                            </div>
+                        <div class="top_blog_container_bottom_wrapper_status_bar">
+                            <span>01/02/2021</span>
+                            <button class="read_futher blue_btn" onclick="">Read More...</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="top_blog_container">
+                    <div class="top_blog_container_top_wrapper">
+                        <figure class="top_blog_container_top_wrapper_figure">
+                            <img src="../aboutMe_rsr/example_blog_img2@2x.png" rel="nofollow">
+                            <div class="top_blog_container_top_wrapper_caption_wrapper">
+                                <figcaption>Simple Image Description Source:</figcaption>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="top_blog_container_bottom_wrapper">
+                        
+                            <hgroup class="top_blog_container_bottom_wrapper_header">
+                                <h3>Header Name 1 testing omg this is the title lol</h3>
+                            </hgroup>
+                            <!-- Article Content [Send 300 words].-->
+                            <div class="blur_effect_box">
+                                <blockquote>
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                </blockquote>
+                            </div>
+                        <div class="top_blog_container_bottom_wrapper_status_bar">
+                            <span>01/02/2021</span>
+                            <button class="read_futher blue_btn" onclick="">Read More...</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="top_blog_container">
+                    <div class="top_blog_container_top_wrapper">
+                        <figure class="top_blog_container_top_wrapper_figure">
+                            <img src="../aboutMe_rsr/example_blog_img3@2x.png" rel="nofollow">
+                            <div class="top_blog_container_top_wrapper_caption_wrapper">
+                                <figcaption>Simple Image Description Source:</figcaption>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="top_blog_container_bottom_wrapper">
+                        
+                            <hgroup class="top_blog_container_bottom_wrapper_header">
+                                <h3>Header Name 1 testing omg this is the title lol</h3>
+                            </hgroup>
+                            <!-- Article Content [Send 300 words].-->
+                            <div class="blur_effect_box">
+                                <blockquote>
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                    This will contain a little extract of the article which the user can read, it will usually be a third to a half of the orginal article, and contain at least 300 words for Search Engine Opmitisation, this will open a new URL that is used to display the article.
+                                </blockquote>
+                            </div>
+                        <div class="top_blog_container_bottom_wrapper_status_bar">
+                            <span>01/02/2021</span>
+                            <button class="read_futher blue_btn" onclick="">Read More...</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <!-- More Less Relevant Blogs and filter control. --> 
+            <section id="side_blogs_container">
+                <!-- All other blogs placed here -->
+                <section id="blog_tools_container">
+                    <!-- Tools to filter blog posts -->
+                    <button class="grey_btn">Latest</button>
+                    <button class="grey_btn">Oldest</button>
+                    <button class="grey_btn">Alphabetical</button>
+                    <button class="grey_btn">Cryptography</button>
+                    <button class="grey_btn">Programming</button>
+                    <button class="grey_btn">Hardware</button>
+
+                
+                </section>
+                <div class="full_width_narrow_blog_post">
+                    <!-- Same contents but different format without image -->
+                    <div class="full_width_narrow_blog_post_header">
+                        <hgroup>
+                            <h4>Header Name 1 testing omg this is the title lol</h4>
+                        </hgroup>
+                        <button class="blue_btn">Read More...</button>
+                    </div>
+                    <p>Thursday 22nd March 2021</p>
+                </div>
+                <div class="full_width_narrow_blog_post">
+                    <!-- Same contents but different format without image -->
+                    <div class="full_width_narrow_blog_post_header">
+                        <hgroup>
+                            <h4>Header Name 1 testing omg this is the title lol</h4>
+                        </hgroup>
+                        <button class="blue_btn">Read More...</button>
+                    </div>
+                    <p>Thursday 22nd March 2021</p>
+                </div>
+                <div class="full_width_narrow_blog_post">
+                    <!-- Same contents but different format without image -->
+                    <div class="full_width_narrow_blog_post_header">
+                        <hgroup>
+                            <h4>Header Name 1 testing omg this is the title lol</h4>
+                        </hgroup>
+                        <button class="blue_btn">Read More...</button>
+                    </div>
+                    <p>Thursday 22nd March 2021</p>
+                </div>
+                <div class="full_width_narrow_blog_post">
+                    <!-- Same contents but different format without image -->
+                    <div class="full_width_narrow_blog_post_header">
+                        <hgroup>
+                            <h4>Header Name 1 testing omg this is the title lol</h4>
+                        </hgroup>
+                        <button class="blue_btn">Read More...</button>
+                    </div>
+                    <p>Thursday 22nd March 2021</p>
+                </div>
+                <div class="full_width_narrow_blog_post">
+                    <!-- Same contents but different format without image -->
+                    <div class="full_width_narrow_blog_post_header">
+                        <hgroup>
+                            <h4>Header Name 1 testing omg this is the title lol</h4>
+                        </hgroup>
+                        <button class="blue_btn">Read More...</button>
+                    </div>
+                    <p>Thursday 22nd March 2021</p>
+                </div>
+            </section>
+            <div id="more_optional">
+                <button class="blue_btn">Load More Blogs...</button>
+            </div>
+        </section>
+    </main>
+	<footer>
+        <div id="news_letter">
+            <form id="newsletter_form">
+                <label>Email:</label>
+                <input autocomplete="email" id="newsletter_input" type="email" name="newsletter_email" placeholder="Enter Email for notifications!" required>
+                <input type="submit" value="Send" id="newsletter_submit"/>
+            </form>
+        </div>
+        <a href="mailto:ec20433@qmul.ac.uk">ec20433@qmul.ac.uk</a>
+    </footer>
+    
+    <script>
+        // Make all icons, hover and move randomly very minute movements, and make bottom arrow jump about up and down.
+    </script>
+	<script type="text/javascript" src="../js/blog.js"></script>
+	<script type="text/javascript" src="../js/newsletter.js"></script>
+</body>
+</html>

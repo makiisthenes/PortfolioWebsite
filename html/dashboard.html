@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<meta charset="utf-8">
+	<title>Portfolio Coursework | Dashboard</title>
+	<meta name="author" content="Michael Peres">
+	<meta name="description" content="My Coureswork Portfolio.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/cookies.css">
+	<script type="text/javascript" src="../js/cookies.js"></script>
+    <link rel="stylesheet" href="../css/dashboard.css">
+	<link rel="icon" type="image/x-icon" href=""/>
+	<!-- JQuery -->
+	<script
+		src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous">
+	</script>
+	<!-- End of JQuery -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-653E971FMT"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-653E971FMT');
+    </script>
+    <!-- End of Google Analytics -->
+</head>
+<body>
+    <header>
+            <div id="main_header">
+                <section id="header_nav">
+                    <nav>
+                       <a href="index.html" class="nav_title_anchor">Home</a>
+                        <a href="viewBlog.html" class="nav_title_anchor">Blogs</a> 
+                        <a href="aboutMe.html" class="nav_title_anchor">About Me</a> 
+                        <a href="myProjects.html" class="nav_title_anchor">Projects</a> 
+                        <a href="login.html" class="nav_title_anchor selected">MyAccount</a>
+						<a href="playground.html" class="nav_title_anchor">Playground</a>
+						<a href="store.html" class="nav_title_anchor">Shop</a>
+						<a href="privacy.html" class="nav_title_anchor">Legal</a>
+                        
+                    </nav>
+                </section>
+                <section id="header_icon">
+                    <nav>
+                        <!-- Icons from: https://www.flaticon.com/ -->
+                        <a href="https://github.com/makiisthenes"><img src="../github.svg"></a>
+                        <a href="https://www.linkedin.com/in/michael-p-88b015200/"><img src="../linkedin.svg"></a>
+                        <a href="mailto:ec20433@qmul.ac.uk"><img src="../email.svg"></a>
+                    </nav>
+                </section>
+            </div>
+    </header>
+	<!-- Cookies div -->
+	<div class="dialog bottom left" id="dialog_cookie">
+		<div id="cookie_div">
+			<div id="cookie_notice_top">
+				<img src="../cookie.png" width="calc(30%)"/>
+				<span>We use cookies to ensure that we give you the best experience on our website.<br><a href="privacy.html">Privacy Statement</a></span>
+			</div>
+			<div id="cookie_notice_bottom">
+				<button class="cookie_btn grey" id="decline_cookies">I disagree.</button>
+				<button class="cookie_btn blue" id="accept_cookies">I agree.</button>
+			</div>
+		</div>
+	</div>
+	<!-- End of cookies div -->
+    <main>
+        <!-- Main Content Here -->
+        <h2>MyAccount Dashboard</h2>
+        <div id="dashboard">
+            <div id="blog_management">
+                <h4>Blog Management Section</h4><br>
+                <div id="blog_list">
+                    <ul>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        <li><span>Blog Name</span><button class="delete">Delete</button></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div id="form_wrapper">
+                <form id="createBlog" action="addEntry.php" method="post">
+                    <h4>Blog Creation Section</h4><br>
+                    <label id="blog_title_label">Blog Title: </label>
+                    <input class="" id="blogTitleEntry" type="text" autocomplete="off" name="blogTitle" label="blog_title_label" placeholder="Enter blog name: " />
+                    <br>
+                    <label id="blog_title_label">Enter Blog Entry below:</label><br>
+                    <textarea class="" id="blog_contents" name="blog_contents" placeholder="Add blog article text here..."></textarea>
+                    <label id="image_upload">Upload Blog Cover Image below:</label><br><br>
+                    <input id="blog_image" class="" type="file" id="myFile" name="filename" /><br><br>
+					<span>Notify newsletter users?</span><input type="checkbox" id="notify_checkbox" name="notify_checkbox"/>
+                    <div id="form_buttons">
+                        <input id="form_submit" type="submit" value="Create Blog!">
+						<input type="button" id="clearBlogBtn" onclick="clearForm()" value="Clear Form Values!">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+        <footer>
+            <div id="news_letter">
+            <form id="newsletter_form">
+                <label>Email:</label>
+                <input autocomplete="email" id="newsletter_input" type="email" name="newsletter_email" placeholder="Enter Email for notifications!" required>
+                <input type="submit" value="Send" id="newsletter_submit"/>
+            </form>
+        </div>
+            <a href="mailto:ec20433@qmul.ac.uk">ec20433@qmul.ac.uk</a>
+        </footer>
+        <script type="text/javascript" src="../js/dashboard.js"></script>
+        <script type="text/javascript" src="../js/analytics.js"></script>
+		<script type="text/javascript" src="../js/newsletter.js"></script>
+    </body>
+
+    </html>

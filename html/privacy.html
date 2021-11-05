@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+	<meta charset="utf-8">
+	<title>Portfolio Coursework | Privacy</title>
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="">
+	<link rel="icon" type="image/x-icon" href=""/>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/cookies.css">
+	<link rel="stylesheet" href="../css/privacy.css">
+	<script type="text/javascript" src="../js/cookies.js"></script>
+	<!-- JQuery -->
+	<script
+		src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous">
+	</script>
+	<!-- End of JQuery -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-653E971FMT"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-653E971FMT');
+    </script>
+    <!-- End of Google Analytics -->
+</head>
+
+<body>
+	 <header>
+            <div id="main_header">
+                <section id="header_nav">
+                    <nav>
+                        <a href="index.html" class="nav_title_anchor ">Home</a>
+                        <a href="viewBlog.html" class="nav_title_anchor">Blogs</a> 
+                        <a href="aboutMe.html" class="nav_title_anchor">About Me</a> 
+                        <a href="myProjects.html" class="nav_title_anchor">Projects</a> 
+                        <a href="login.html" class="nav_title_anchor">MyAccount</a>
+						<a href="playground.html" class="nav_title_anchor">Playground</a>
+						<a href="store.html" class="nav_title_anchor">Shop</a>
+						<a href="privacy.html" class="nav_title_anchor selected">Legal</a>
+                        
+                    </nav>
+                </section>
+                <section id="header_icon">
+                    <nav>
+                        <!-- Icons from: https://www.flaticon.com/ -->
+                        <a href="https://github.com/makiisthenes"><img src="../github.svg"></a>
+                        <a href="https://www.linkedin.com/in/michael-p-88b015200/"><img src="../linkedin.svg"></a>
+                        <a href="mailto:ec20433@qmul.ac.uk"><img src="../email.svg"></a>
+                    </nav>
+                </section>
+            </div>
+    </header>
+    <!-- Cookies div -->
+	<div class="dialog bottom left" id="dialog_cookie">
+		<div id="cookie_div">
+			<div id="cookie_notice_top">
+				<img src="../cookie.png" width="calc(30%)"/>
+				<span>We use cookies to ensure that we give you the best experience on our website.<br><a href="privacy.html">Privacy Statement</a></span>
+			</div>
+			<div id="cookie_notice_bottom">
+				<button class="cookie_btn grey" id="decline_cookies">I disagree.</button>
+				<button class="cookie_btn blue" id="accept_cookies">I agree.</button>
+			</div>
+		</div>
+	</div>
+	<!-- End of cookies div -->
+	<main>
+		<h1>Privacy Policy</h1><hr>
+		
+		<br>
+		<h2>Information that is gathered from visitors</h2>
+		<p>In common with other websites, log files are stored on the web server saving details such as the visitor's IP address, browser type, referring page and time of visit.</p>
+		<p>Cookies may be used to remember visitor preferences when interacting with the website.</p>
+		<p>Where registration is required, the visitor's email and a username will be stored on the server.</p>
+		<h2>How the Information is used</h2>
+		<p>The information is used to enhance the vistor's experience when using the website to display personalised content and possibly advertising.</p>
+		<p>E-mail addresses will not be sold, rented or leased to 3rd parties.</p>
+		<p>E-mail may be sent to inform you of news of our services or offers by us or our affiliates.</p>
+		<h2>Visitor Options</h2>
+		<p>If you have subscribed to one of our services, you may unsubscribe by following the instructions which are included in e-mail that you receive.</p>
+		<p>You may be able to block cookies via your browser settings but this may prevent you from access to certain features of the website.</p>
+		<h2>Cookies</h2>
+		<p>Cookies are small digital signature files that are stored by your web browser that allow your preferences to be recorded when visiting the website. Also they may be used to track your return visits to the website.</p>
+		<p>3rd party advertising companies may also use cookies for tracking purposes.</p>
+		<h2>Google Ads</h2>
+		<p>Google, as a third party vendor, uses cookies to serve ads.</p>
+		 <p>Google's use of the DART cookie enables it to serve ads to visitors based on their visit to sites they visit on the Internet.</p>
+		<p>Website visitors may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy.</p>
+		
+	
+	</main>
+	<footer>
+        <div id="news_letter">
+            <form id="newsletter_form">
+                <label>Email:</label>
+                <input autocomplete="email" id="newsletter_input" type="email" name="newsletter_email" placeholder="Enter Email for notifications!" required>
+                <input type="submit" value="Send" id="newsletter_submit"/>
+            </form>
+        </div>
+        <a href="mailto:ec20433@qmul.ac.uk">ec20433@qmul.ac.uk</a>
+    </footer>
+</body>
+<script type="text/javascript" src="../js/newsletter.js"></script>
+</html>

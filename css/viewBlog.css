@@ -1,0 +1,787 @@
+/* 1085 px width minimum */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #F5F5F5;
+    
+}
+/* Hidding Scrollbar on browser for website. */
+body{
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.selected{
+    opacity: 0.6;
+}
+
+
+/* Header Styling */ 
+header{
+    position: sticky;
+    top: 0;
+    opacity: 0.95;
+    width: 100%;
+    z-index: 99999;
+}
+
+#main_header{
+    background-color: black;
+    padding: 25px 0;
+    overflow: auto;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    z-index: 2;
+}
+
+section#header_nav a{
+    text-decoration: underline;
+    color: white;
+    padding: 0px 15px;
+    font-size: 17px;
+    float: left;   
+}
+
+section#header_nav a:hover{
+    opacity: 0.7;
+}
+
+section#header_nav a:nth-child(1){
+    padding-left: 25px;
+}
+
+section#header_icon img{
+    height: 18px;
+}
+
+section#header_icon nav{
+    display: flex;
+    float:right;   
+}
+
+section#header_icon a{
+    padding: 0px 15px;
+    align-items:baseline;
+    
+}
+section#header_icon a:hover{
+    opacity: 0.7;
+}
+section#header_icon a:nth-child(1){
+    padding-right: 9px;
+}
+
+#title_panel{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 0.05px 35px rgba(0,0,0, 0.45);
+    /* box-shadow:  0 22.3px 17.9px rgba(0, 0, 0, 0.072); */
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 0 0 10px 10px;
+}
+#title_panel h4{
+    /* Blog Header */
+    font-family: Heebo;
+    font-size: 1.7em;
+    font-weight: 550;
+    margin: 0 20px 0 20px;
+    float: left;
+}
+
+#title_panel input{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid rgba(0,0,0, 0.2);
+    border-radius: 1px;
+    padding-bottom: 2px;
+    color: black;
+    font-size: 1em;
+    float: left;
+    width: 30%;
+}
+
+#title_panel input:active,  #title_panel input:focus{
+    border-bottom: solid rgba(0,0,0, 0.4);
+    outline: none;
+}
+
+
+#title_panel button{
+    margin-left: auto;
+    order: 2;
+    margin-right: 20px;
+}
+
+
+
+
+#title_panel #profile_mask{
+    display: none;
+}
+
+.blue_btn, .grey_btn, .red_btn{
+    font-family: Heebo;
+    padding: 3px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1875D2;
+    font-size: 0.9em;
+    color: white;
+    opacity: 0.9;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.red_btn{
+	background-color: rgba(255,0,0,0.5);
+	opacity: 1.0;
+}
+
+.grey_btn{
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0.6
+}
+
+.blue_btn:hover, .grey_btn:hover, .red_btn:hover{
+    opacity: 0.8;
+}
+.blue_btn:active, .blue_btn:focus, .grey_btn:active, .grey_btn:focus, .red_btn:active, .red_btn:focus{
+    opacity: 1.0;
+    outline: none; 
+}
+
+/* Main Content is here */
+main{
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+}
+
+
+.top_blogs_container{
+    /* Holds the top 3 main blogs in front of user. 1 row.*/
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap:;
+    background-color: transparent;
+    margin: 50px 0;
+    background-color: transparent;
+}
+
+.top_blog_container{
+    /* Holds the main blog in container. */
+    height: 70vh;
+    overflow: hidden;;
+    width: 25%;
+    border-radius: 19px;
+    /* min-width: 285px; */
+    box-shadow: 10px 10px 60px rgba(0,0,0, 0.2)
+    
+}
+
+.top_blog_container:hover{
+	box-shadow: 10px 10px 80px rgba(0,0,0, 0.4)
+}
+
+/* Styling for top container box */
+.top_blog_container_top_wrapper{
+    width: auto;;
+    height: 40%;
+    background-color: black;
+}
+.top_blog_container_top_wrapper_figure{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.top_blog_container_top_wrapper_figure img{
+    width: auto;
+    height: inherit;
+    overflow: hidden;
+    
+}
+
+.top_blog_container_top_wrapper_caption_wrapper{
+    display: block;
+    position: absolute;
+    width: inherit;
+    bottom: 0;
+    padding: 12px 0;
+    /* border: solid red 1px; */
+    background-color: rgba(0, 0, 0, 0.8)
+}
+.top_blog_container_top_wrapper_caption_wrapper figcaption{
+    padding-left: 15px;
+    color: whitesmoke;
+    opacity: 0.6;
+    font-style: italic;
+    font-family: sans-serif;
+    font-size: 0.7em;
+}
+
+
+/* Styling for bottom container box */
+.top_blog_container_bottom_wrapper{
+    position: relative;
+    width: auto;
+    height: 60%;
+    background-color: white;
+    padding: 0px 10px;
+    
+    
+}
+
+.top_blog_container_bottom_wrapper_header {
+    padding: 10px 0;
+    width: 100%;
+    height: auto;
+    
+    
+}
+
+.top_blog_container_bottom_wrapper_header h3{
+    font-family: Heebo, sans-serif!important;
+    text-transform: capitalize;
+    font-size: 1.6em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* calculate width using calc(percentage) */
+    width: calc(90%);
+    font-weight: 600;
+}
+
+.blur_effect_box blockquote{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(60%);
+    background-color: transparent;
+    text-overflow: ellipsis;
+    font-size: 1.25em;
+    overflow: hidden;
+    font-family: Heebo, sans-serif !important;
+}
+
+.blur_effect_box{
+   /* Not needed */
+}
+
+.top_blog_container_bottom_wrapper_status_bar{
+    position: absolute; 
+    bottom: 0;
+    display: flex;
+    width: calc(95%);
+    font-family: Heebo, sans-serif !important;
+    padding: 10px 0;
+    background-color: white;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px -31px 24px 10px #FFFFFF; 
+box-shadow: 0px -31px 24px 10px #FFFFFF;
+    
+}
+.top_blog_container_bottom_wrapper_status_bar span{
+    align-self: center;
+   
+}
+
+.top_blog_container_bottom_wrapper_status_bar button{
+    align-self: center;
+}
+
+
+/* Side content */
+#blog_tools_container{
+    position: relative;
+    background-color: white;
+    width:100%;
+    height: 50px;
+    /* border: solid 1px rgba(0, 0, 0, 0.4); */
+    display: flex;
+    margin: 20px 0;
+}
+
+#blog_tools_container button{
+    align-self: center;
+    margin: 10px;
+    float: right;
+}
+
+
+.full_width_narrow_blog_post{
+    width: auto;
+    background-color: white;
+    margin: 30px 0;
+    border: solid 2px rgba(0,0,0,0.3);
+}
+
+
+.full_width_narrow_blog_post p{
+    font-family: Heebo, sans-serif !important;
+    padding: 10px;
+}
+.full_width_narrow_blog_post_header{
+    /* Header of banner */
+    display: flex;
+    justify-content: space-between;
+}
+.full_width_narrow_blog_post_header h4{
+    color: rgba(0,0,0, 0.89);
+    padding: 10px;
+    font-family: Heebo, sans-serif !important;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 2em;
+    opacity: 0.9;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+    
+}
+.full_width_narrow_blog_post_header button{
+    margin: 10px 5px;
+    
+}
+#more_optional{
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    margin: 50px 0;
+    padding: 10px 0px;
+}
+#more_optional button{
+    font-size: 1.4em;
+	border: solid black 2px;
+	padding: 10px;
+	font-family: Heebo, sans-serif !important;
+	color: white;
+	background-color: red;
+}
+
+
+
+
+
+.selected_filter{
+	border: solid rgba(0,0,0,0.5) 2px;
+    background-color: white;
+	color: rgba(0,0,0,0.5);
+	pointer-events: none;
+}
+
+#month_select{
+	/* For some reason this doesn't style. Idk why. */
+	font-family: Heebo, sans-serif !important; 
+}
+
+
+
+
+
+
+
+/* End of main content. */
+/* Seperate blog view generation css. */
+div#gen_blog_main_wrapper{
+	width: 55%; /* Main width of blog. */
+	margin: 40px auto;
+	/* height: 1700px;*/ /* for testing */
+	height: auto;
+	background-color: white;
+	border: none;
+	box-shadow: 10px 10px 80px rgba(0,0,0, 0.4);
+	border-radius: 19px;
+	padding: 0px 0px 30px 0;
+}
+
+div#gen_blog_main_top_wrapper{
+	width: 100%;
+	height: calc(15%);
+	background-color: transparent;
+	border-radius: 19px 19px 0px 0px;
+	display: flex;
+	
+}
+#gen_blog_main_top_elements_wrapper{
+	align-self: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	height: 70%;
+	background-color: transparent;
+	flex-basis: 100%;
+	
+}
+
+
+/* This is for the left side of main header of blog post. */
+#gen_blog_main_top_header_left{
+	/*background-color: purple; */
+	background-color: transparent;
+	flex-basis: 85%;
+	padding: 20px 20px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	/* align-items: space-around; */
+	justify-content: space-around;
+}
+
+#gen_blog_main_top_header_left_title{
+	/* Styling of header for blog. */
+	text-rendering:optimizeSpeed;
+	text-transform: capitalize;
+	color: rgba(0,0,0, 0.79); 
+	font-family: Heebo, sans-serif !important;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 1.9em;
+	font-weight: 600;
+}
+
+#gen_blog_main_top_header_left_date{
+	/* Styling of header for blog date. */
+	color: rgba(0,0,0, 0.59); 
+	font-family: Heebo, sans-serif !important;
+	font-size: 1.2em;
+	font-weight: 500;
+	position: relative;
+	bottom: 6px;
+}
+
+#gen_blog_main_top_header_right{
+	/*background-color: orange;*/
+	background-color: transparent;
+	flex-basis: 15%;
+	padding: 20px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+#gen_blog_main_top_header_right button{
+	
+}
+
+.go_back{
+	background: rgba(255,0,0, 0.7);
+	border: none;
+	border-radius: 19px;
+	padding: 20px 30px;
+	font-family: Heebo, sans-serif !important;
+	font-size: 1.2em;
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.go_back:hover{
+	background: rgba(255,0,0, 0.4);
+}
+
+.go_back:active{
+	background: rgba(255,0,0, 0.75);
+}
+
+
+/* Main Content, article and image here. */
+#gen_blog_main_content{
+	margin: 20px 30px;
+}
+
+#gen_blog_main_content article{
+	/*column-count: 2;
+	column-gap: 20px;*/
+	word-wrap: break-word;
+	column-width: 60%;
+	column-count: 1;
+	font-weight: 400;
+	font-size: 1.3em;
+	font-family: Heebo, sans-serif !important;
+	color: black;
+}
+
+#gen_blog_main_content figure{
+	display: block;
+	width: 35%;
+	text-align: center;
+	margin: 20px auto 40px auto;
+}
+#gen_blog_main_content figure img{
+	width: 100%;
+}
+
+/* Comment Section of Blog. */
+#comment_content{
+	display: block;
+	margin: 20px;
+	padding: 10px;
+}
+
+#comment_content hr{
+	width: 70%;
+	height: 3px;
+	color: rgba(0,0,0, 0.79); 
+	background-color: rgba(0,0,0, 0.79); 
+	margin-top: 30px;
+}
+#comment_header{
+	font-weight: 600;
+	font-size: 1.3em;
+	font-family: Heebo, sans-serif !important;
+	color: black;
+	margin: 40px 0px 20px 0px;
+}
+
+
+.comment_wrapper{
+	position: relative;
+	margin: 10px 20px;
+	border: solid rgba(0,0,0,0.19) 2px;
+	border-radius: 1%;
+	padding: 20px 10px;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+}
+
+/* Comment Section Divisisons. */
+.username_comment{
+	grid-column: span 1;
+	overflow-x: hidden;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+	margin-right: 10px;
+	
+}
+.username_comment a{
+	text-decoration: none;
+	font-family: "Inconsolata", monospace !important;
+	color: rgba(0,0,0, 0.75);
+	font-size: 1em;
+}
+
+.username_comment a:hover{
+	text-decoration: underline;
+}
+
+.message_comment{
+	grid-column: span 7;
+	/*padding: 0px 10px;*/
+}
+.message_comment span{
+	text-decoration: none;
+	font-family: "Inconsolata", monospace !important;
+	color: black;
+	font-size: 1em;
+}
+
+.date_comment{
+	grid-column: span 2;
+	text-decoration: none;
+	font-family: "Inconsolata", monospace !important;
+	font-size: 1em;
+	color: rgba(0,0,0, 0.75);
+	text-align: right;
+	margin-left: right;
+}
+
+/* Optional Button */
+.option_comment_wrapper{
+	position: absolute;
+	right: 0;
+	margin: -1em;	
+}
+
+.option_btn{
+	background: rgba(255,0,0, 1);
+	border: none;
+	border-radius: 3.5px;
+	color: white;
+	/* border: solid black 3px; */
+	padding: 5px 7px;
+	font-family: "Inconsolata", monospace;
+	cursor: pointer;
+	font-size: 0.9em;
+}
+
+.option_btn:hover{
+	text-decoration: underline;
+}
+
+.option_btn:active{
+	opacity: 0.95;
+}
+
+
+
+/* No comment div alt */
+#nocomment{
+	padding: 20px 10px;
+	text-align: center;
+	margin: 10px auto;
+	text-decoration: none;
+	font-family: "Inconsolata", monospace!important;
+	color: black;
+}
+
+
+/* Comment Bar Section */
+.user_input_wrapper{
+	position: relative;
+	margin: 10px 20px;
+	padding: 20px 0;
+	display: grid;	
+	
+}
+
+.user_input_wrapper input{
+	grid-column-start: 1;
+  	grid-column-end: 9;
+	padding: 16px 10px;
+	margin: 0px 10px 0px 0px;
+	display: block;
+	border-radius: 5px;
+	outline: none;
+	border: solid rgba(0,0,0,0.79) 1px;
+}
+
+
+.user_input_wrapper button{
+	grid-column-start: 9;
+  	grid-column-end: 10;
+	font-family: Heebo;
+	border: none;
+	border-radius: 5px;
+	background-color: #1875D2;
+	font-size: 0.9em;
+	color: white;
+	opacity: 0.9;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	outline: none;
+	cursor: pointer;
+}
+
+.user_input_wrapper button:hover{
+	opacity: 0.8;
+}
+
+.user_input_wrapper button:active{
+	opacity: 0.9;
+}
+
+.full-width-abs{
+	position: absolute;
+	width: 100%;
+	padding: 10px;
+}
+
+
+
+/* End of seperate blog view generation css. */
+/* Footer */
+footer{
+   background-color: black;
+    padding: 25px 0;
+    overflow: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    
+}
+ 
+/* Footer Newsletter Elements */
+#news_letter form{
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 17px;
+    float: left;
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+footer #newsletter_input{
+    border: solid white 1px;
+    background-color: transparent;
+    padding: 10px;
+    margin:  0 20px 0 10px;
+    color: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+    width: 300px;    
+}
+
+footer #newsletter_input:focus{
+   border: solid black 1px;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+}
+
+
+footer #newsletter_submit{
+    padding: 11px 15px;
+    background-color: #1D83F6;
+    border: none;
+    color: white;
+    font-family: 'Inconsolata', monospace !important;
+    border-radius: 5px;
+    width: 60px;
+}
+
+footer #newsletter_submit:hover{
+    animation: slideWidth 5s 1;
+    width: 100%;
+    -webkit-animation-name: ShineAnimation;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(.12,.89,.98,.47);
+    background-color: #1D8FFF;
+}
+        
+
+/* Email Mail Label */
+footer a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    font-size: 17px;
+    float: right;
+    padding-right: 15px;
+    
+}

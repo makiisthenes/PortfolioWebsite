@@ -1,0 +1,459 @@
+/* 1085 px width minimum */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+@import "../css/header.css";
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+/* Hidding Scrollbar on browser for website. */
+body{
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.selected{
+    opacity: 0.6;
+}
+
+
+/* Main Content.*/
+
+main{
+    /* Change this to 100% when finished adding content */ 
+    width: 100%;
+    background-color: white;
+}
+
+
+div#cover_frame{
+    position: relative;
+    bottom: 0;
+    height:100vh;
+    width: 100%;
+    z-index: 1;
+    /*background-color: yellow; */
+    background-color: transparent;
+    overflow: auto;
+}
+div#middle_image{
+    width: 75%;
+}
+div#middle_image, img.icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    z-index: 10;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+img#main_title{
+    position: relative;
+    z-index: 15;
+    background-color: transparent;
+    width: 100%;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	
+}
+
+
+/* Animated 1 */
+img#main_title{
+    animation: showTitle 5s 1;
+	animation-play-state: paused;
+}
+
+.play{
+	animation-play-state: running;
+}
+
+@keyframes showTitle{
+    0% {opacity: 0.0;};
+    50% {opacity: 0.7};
+    100{opacity: 1.0};
+}
+
+
+/* Animated 2 */
+img.icon{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    background-color: transparent;   
+}
+
+img.icon:nth-child(odd){
+    animation: showIcons 15s 1; 
+	/* animation-play-state: paused; */
+	animation-play-state: paused;
+}
+img.icon:nth-child(even){
+    animation: showIcons 11s 1; 
+	/* animation-play-state: paused; */
+	animation-play-state: paused;
+}
+
+
+@keyframes showIcons{
+    0% {opacity: 0.0};
+    70% {opacity: 0.0};
+    100%{opacity: 1.0};
+}
+
+
+/* Arrow Panel */
+div#bottom_panel{
+    width: inherit;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+}
+
+button#scrollDown{
+    width: 70px;
+    bottom: 0;
+    background: none;
+    border: none;
+    display: block;
+    margin: auto; 
+    position: relative;
+    
+}
+
+button#scrollDown>img{
+    width: auto;
+    animation: jiggleVertically 3s infinite;
+    position: relative;
+}
+@keyframes jiggleVertically{
+    /* Some animation to make */
+}
+
+
+
+/* Main Content Styling */
+#main_content{
+    background-color: transparent;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.aboutSection{
+    margin: 10px 0 ;
+    font-family: 'Inconsolata', monospace;
+}
+
+img#bgdtitle{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#background qoute{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Playball', cursive;
+    color: black;
+    font-size: 54px;
+    font-size: 3.25em;
+    margin-top: 50px;
+}
+#background p{
+   text-align: center;
+   width: 70%;
+   margin: 0 auto;
+    margin-top: 50px;
+    font-size: 1.2em;
+    font-family: Heebo;
+}
+
+
+#books #bookshelf{
+    margin: 50px auto 100px auto;
+    width: 60%;
+    text-align: center;
+}
+#books #bookshelf img{
+    height: 250px;
+}
+
+#qualify #blockSeperater{
+    background-color: black;
+    padding: 40px;
+    text-align: center;
+}
+
+#qualify #blockSeperater code{
+    color: white;
+    font-family: 'Inconsolata', monospace !important;
+    font-size: 4em;
+    
+}
+#qualify #blockSeperater code:nth-child(1){
+    color: #FF960D;
+}
+
+#qualify #blockSeperater code:nth-child(2){
+    color: #A2DBD1;
+}
+#qualify #blockSeperater code:nth-child(3){
+    color: #FFFFFF;
+}
+
+#qualify #code_qualify{
+    margin: 50px auto;
+    width: 60%;
+    color: black;
+    font-family: 'Inconsolata', monospace !important;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+
+section#skills{
+    background-color: black;
+    color: white;
+    padding: 20px 0 0 0;
+    margin-bottom: 0px;
+}
+h2{
+    font-family: DotGothic16 !important;
+    font-size: 4em;
+    text-align: center;
+    margin: 70px 0 ;
+}
+
+.skill_box{
+    border: white 2px solid;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    overflow-y: auto;
+    display: flex
+}
+
+
+.skill_box figure{
+    width: 15%;
+    height: inherit;
+    padding: 0px 10px;
+    display: flex;
+    background-color: white;
+    opacity: 1.0;
+    
+}
+.skill_box figure img{
+    width: 100%;
+    text-align: center;
+    justify-self: center;
+    align-self: center; 
+}
+.skill_box figure figcaption{
+    display: none;
+}
+/* Could use bootstrap media class, but not allowed in coursework */ 
+
+.skill_box .skill_main{
+    width: 60%;
+    padding: 0 10px;
+    line-height: 25px;
+}
+
+.skill_box .skill_main h4{
+    text-decoration: underline;
+    font-weight: 600;
+    color: white;  
+}
+
+
+.skill_box .skill_meta{
+    width: 25%;
+    text-decoration: underline;
+    font-weight: 600;
+    padding: 0px 10px;
+    text-align: right;
+}
+
+
+.skill_box blockquote a{
+    color: purple;
+    font-weight: 500;
+    opacity: 0.5;
+    background-color: rgba(255,255,255, 0.6);
+    
+}
+.skill_box blockquote a:hover{
+    opacity:0.9;
+}
+
+
+.graph_box{
+    background-color: white;
+    padding: 20px;
+}
+
+.graph_box h4{
+    color: black;
+    background-color: white;
+    font-family: DotGothic16;
+    font-size: 4em;
+    text-align: center;
+}
+
+.graph_box img{
+    margin: 10px auto;
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+
+
+#end_content{
+    background-color: white;
+    text-align: center;
+    padding: 0 3.5% 30px 3.5%;
+    display: flex;
+    flex-wrap: nowrap;
+    
+    
+}
+#end_content a{
+    padding: 10px 20px;
+    background-color: #1D83F6;
+    border: solid transparent 2px;
+    width: 50%;
+    border-radius: 10px;
+    margin: 10px;
+}
+#end_content a{
+    text-decoration: none;
+    color: white;
+}
+#end_content button#end{
+    background: none;
+    border: none;
+    color: whitesmoke;
+font-family:Heebo;
+font-size: 1.5em;
+}
+#end_content a:hover{
+    opacity: 0.8;
+}
+
+
+
+/* Footer */
+footer{
+   background-color: black;
+    padding: 25px 0;
+    overflow: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    
+}
+ 
+/* Footer Newsletter Elements */
+#news_letter form{
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 17px;
+    float: left;
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+footer #newsletter_input{
+    border: solid white 1px;
+    background-color: transparent;
+    padding: 10px;
+    margin:  0 20px 0 10px;
+    color: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+    width: 300px;    
+}
+
+footer #newsletter_input:focus{
+   border: solid black 1px;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+}
+
+
+footer #newsletter_submit{
+    padding: 11px 15px;
+    background-color: #1D83F6;
+    border: none;
+    color: white;
+    font-family: 'Inconsolata', monospace !important;
+    border-radius: 5px;
+    width: 60px;
+}
+
+footer #newsletter_submit:hover{
+    animation: slideWidth 5s 1;
+    width: 100%;
+    -webkit-animation-name: ShineAnimation;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(.12,.89,.98,.47);
+    background-color: #1D8FFF;
+}
+        
+
+/* Email Mail Label */
+footer a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    font-size: 17px;
+    float: right;
+    padding-right: 15px;
+    
+}
+
+
+
+

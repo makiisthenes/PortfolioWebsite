@@ -1,0 +1,350 @@
+/* 1085 px width minimum */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+@-webkit-keyframes ShineAnimation{
+    from {
+        background-repeat:no-repeat;
+        background-image:-webkit-linear-gradient(
+            top left,
+            rgba(255, 255, 255, 0.0) 0%,
+            rgba(255, 255, 255, 0.0) 45%,
+            rgba(255, 255, 255, 0.5) 48%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0.5) 52%,
+            rgba(255, 255, 255, 0.0) 57%,
+            rgba(255, 255, 255, 0.0) 100%
+        );
+        background-position:-250px -250px;
+        background-size: 600px 600px
+    }
+    to {
+        background-repeat:no-repeat;
+        background-position:250px 250px;
+    }
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.selected{
+    opacity: 0.6;
+}
+
+#alert_banner{
+    display: visible;
+    background-color: red;
+    color: white;
+}
+
+/* Header Styling */ 
+header{
+    background-color: black;
+    padding: 25px;
+    overflow: auto;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+}
+section#header_nav a{
+    text-decoration: underline;
+    color: white;
+    padding: 0px 15px;
+    font-size: 17px;
+    float: left;   
+}
+section#header_nav a:nth-child(1){
+    padding-left: 1px;
+}
+section#header_nav a:hover{
+    opacity: 0.7;
+}
+section#header_icon img{
+    height: 18px;
+}
+
+section#header_icon nav{
+    display: flex;
+    float:right;
+    
+}
+
+section#header_icon a{
+    padding: 0px 15px;
+    align-items:baseline;
+    
+}
+section#header_icon a:hover{
+    opacity: 0.7;
+}
+
+section#header_icon a:nth-child(1){
+    padding-right: 9px;
+}
+
+
+/* Main Content Here */
+main{
+    text-align: left;
+}
+
+main #dashboard_header{
+	position: relative;
+    font-size: 2em;
+    color: black;
+    text-decoration: underline;
+    margin: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+#dashboard_header h2{
+	display: inline-block;
+}
+#dashboard_header button{
+	display: inline-block;
+	padding: 15px;
+	border: none;
+	outline: none;
+	background-color: red;
+	font-family: sans-serif;
+	color: white;
+}
+
+
+
+
+
+
+#blog_management{
+    flex-grow: 2;
+}
+
+
+form#createBlog{
+    background-color: beige;
+    padding: 20px;
+    flex-grow: 1;
+    height: 80%;
+}
+
+form#createBlog label{
+    font-size: 1.2em;
+}lo
+
+form#createBlog input{
+    padding: 6px 20px 6px 2px;
+    font-size: 1.2em;
+    width: 60%;
+    display: block;
+}
+
+form#createBlog input:active, form#createBlog input:focus, form#createBlog textarea:active, form#createBlog textarea:focus{
+	border: none;
+}
+
+form#createBlog textarea{
+    width: 500px;
+    height: 300px;
+	max-height: 300px;
+	overflow-y: scroll;
+    display: block;
+	max-width: 500px;
+	min-width: 150px;
+	margin-bottom: 5px;
+	margin: 10px;
+	
+}
+
+
+form#createBlog textarea:focus{
+	outline: solid 2px green ;
+}
+
+#blogTitleEntry{
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#blogTitleEntry:focus{
+	outline: solid 2px green ;
+}
+
+
+#form_buttons{
+    
+    margin: 10px;
+	text-align: center;
+	align-content: center;
+	
+}
+
+#form_buttons input:nth-child(1) {
+    background-color: white;
+	padding: 10px
+}
+
+#clearBlogBtn{
+    background-color: red;
+    color: white;
+	padding: 10px;
+  
+} 
+
+
+#dashboard{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    padding: 10px;
+    height: 90%;
+}
+
+#blog_management{
+    background-color: antiquewhite;
+    font-family: Heebo, sans-serif !important;
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+#blog_list{
+    margin:auto;
+    background-color: powderblue;
+    width: 60%;
+    height: 70%;
+    overflow-x: hidden;
+    padding: 10px;
+    overflow-y:auto;
+    
+}
+
+#blog_list ul{
+    overflow-y: scroll;
+    height: 100%;
+}
+#blog_list li:nth-child(odd){
+    background-color: papayawhip;
+}
+
+#blog_list li:nth-child(even){
+    background-color: peachpuff;
+}
+#blog_list li span{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#blog_list li{
+    position: relative;
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+}
+button.delete{
+    position: absolute;
+    background-color: red;
+    border: black 2px solid;
+    color: white;
+    padding: 4px;
+    right: 0;
+}
+
+.input_warning{
+	border: solid 3px red;
+}
+
+
+
+
+/* Footer */
+footer{
+   background-color: black;
+    padding: 25px 0;
+    overflow: auto;
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+}
+
+/* Footer Newsletter Elements */
+
+
+#news_letter form{
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 17px;
+    float: left;
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+footer #newsletter_input{
+    border: solid white 1px;
+    background-color: transparent;
+    padding: 10px;
+    margin:  0 20px 0 10px;
+    color: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+    width: 300px;    
+}
+
+footer #newsletter_input:focus{
+   border: solid black 1px;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+}
+
+
+
+footer #newsletter_submit{
+    padding: 11px 15px;
+    background-color: #1D83F6;
+    border: none;
+    color: white;
+    font-family: 'Inconsolata', monospace !important;
+    border-radius: 5px;
+    width: 60px;
+}
+
+footer #newsletter_submit:hover{
+    animation: slideWidth 5s 1;
+    width: 100%;
+    -webkit-animation-name: ShineAnimation;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(.12,.89,.98,.47);
+    background-color: #1D8FFF;
+}
+        
+
+
+/* Email Mail Label */
+footer a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    font-size: 17px;
+    float: right;
+    padding-right: 15px;
+    
+}
+
+

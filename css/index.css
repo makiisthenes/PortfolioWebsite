@@ -1,0 +1,470 @@
+/* 1085 px width minimum */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@-webkit-keyframes ShineAnimation{
+    from {
+        background-repeat:no-repeat;
+        background-image:-webkit-linear-gradient(
+            top left,
+            rgba(255, 255, 255, 0.0) 0%,
+            rgba(255, 255, 255, 0.0) 45%,
+            rgba(255, 255, 255, 0.5) 48%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0.5) 52%,
+            rgba(255, 255, 255, 0.0) 57%,
+            rgba(255, 255, 255, 0.0) 100%
+        );
+        background-position:-250px -250px;
+        background-size: 600px 600px
+    }
+    to {
+        background-repeat:no-repeat;
+        background-position:250px 250px;
+    }
+}
+
+@keyframes fadeOut{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0.25;
+		
+	}
+	100%{
+		display: none;
+		opacity: 0;
+	}
+}
+
+
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+	min-width: 1085px;
+	position: relative;
+}
+
+#profile_pic{
+	border-radius: 100%;
+	min-width: 140px;
+	min-height: 140px;
+	overflow-y: hidden;
+	height: 100%;
+}
+
+
+.selected{
+    opacity: 0.6;
+}
+
+.no_js{
+	font-size: 1.5em;
+	position: fixed;
+	opacity: 1;
+	top: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.alert_banner{
+    display: visible;
+    background-color: red;
+    color: white;
+}
+
+/* Header Styling */ 
+header{
+    background-color: black;
+    padding: 25px;
+    overflow: auto;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+}
+section#header_nav a{
+    text-decoration: underline;
+    color: white;
+    padding: 0px 15px;
+    font-size: 17px;
+    float: left;   
+}
+section#header_nav a:nth-child(1){
+    padding-left: 1px;
+}
+section#header_nav a:hover{
+    opacity: 0.7;
+}
+section#header_icon img{
+    height: 18px;
+}
+
+section#header_icon nav{
+    display: flex;
+    float:right;
+    
+}
+
+section#header_icon a{
+    padding: 0px 15px;
+    align-items:baseline;
+    
+}
+section#header_icon a:hover{
+    opacity: 0.7;
+}
+
+section#header_icon a:nth-child(1){
+    padding-right: 9px;
+}
+
+/* Main Content */
+main {
+    height: 86%;
+    width: 100%;
+    position: relative;
+}
+main section#main_container{
+    width: 30%;
+    /* background-color: red; */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    
+}
+
+
+/* Toggle for button */
+#profile_pic_toggle{
+	width: 15%;
+	background-color: transparent;
+	height: auto;
+	min-height: 10vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+#profile_toggle_btn{
+	margin: 10px auto 0px auto;
+	width: 90%;
+	padding: 20px;
+	background: black;
+	color: white;
+	font-size: 1em;
+	font-family: 'Inconsolata' ,monospace !important;
+	opacity: 1.0;
+	border: none;
+	border-radius: 0%;
+	outline: none;
+}
+
+#profile_toggle_btn:hover{
+	opacity: 0.8;
+	outline: none;
+	border-radius: 0%;
+	text-decoration: underline;
+}
+
+#profile_toggle_btn:active{
+	opacity: 0.9;
+	outline: none;
+	border-radius: 0%;
+	border: none;
+	text-decoration: underline;
+}
+
+#profile_status{
+	margin: 0px auto 10px auto;
+	width: 88%;
+	padding: 20px 0px;
+	border: 3px black solid;
+	text-align: center;
+	font-family: 'Inconsolata',  monospace !important;
+	font-size: 1.5em;
+	
+}
+
+
+/* Notification section */
+#notification_section{
+	position: absolute;
+	height: 90vh;
+	width: 20%;
+	background-color: transparent;
+	right: 0;
+	margin-right: 15px;
+	height: 70vh;
+	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+  	scrollbar-width: none;  /* Firefox */
+}
+#notification_section::-webkit-scrollbar{
+	display: none;
+}
+
+/* Add notification animation for ease in. */
+#notification_section .notif{
+	margin: 10px 0px;
+	font-family: sans-serif;
+	padding: 20px;
+	background-color: rgba(0,0,0, 0.85);
+	border-radius: 2%;
+	color: white;
+	position: relative;
+	overflow-y: hidden;
+	outline: none;
+	animation-play-state: paused;
+	animation-name: fadeOut;
+	animation-duration: 1250ms;
+	animation-fill-mode: forwards;
+}
+
+#notification_section .notif:active{
+	outline: none;
+}
+
+.notif .close_btn{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	background: none;
+	border:none;
+	color: white;
+	text-decoration: underline;
+	outline: none;
+}
+
+.notif .close_btn::active{
+	outline: none;
+}
+
+.notif span{
+	opacity: 0.7;
+	word-wrap: normal;
+	text-overflow: ellipsis;
+}
+
+
+
+
+
+/*  Main content */
+
+#main_wrapper{
+    height: 100%;
+}
+/* Section for Profile Picture. */
+#profile_pic_section{
+    /* background-color: blue; */ 
+    height:40%;
+    padding: 10px; 
+    display: flex;
+    margin-bottom: 1px;
+}
+#profile_pic_section figure{
+    width: 30%;
+    align-self: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#profile_pic_section img{
+    width: 100%;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+
+
+/* Section to continue to my portfolio. */
+#interact_section{
+    /* background-color: RGBA(255, 255, 0, 0.7); */
+    /* background-color: RGBA(0, 144, 255, 0.5); */
+    /* border-radius: 5%; */
+    height: 60%; 
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center
+}
+
+/* Styling of header name for webpage */
+#interact_section h2{
+    font-family: 'Heebo', sans-serif !important;
+    font-weight: 500;
+    font-size: 3em;
+    padding: 20px 0;
+    text-align: center;
+    white-space: nowrap;
+    
+}
+#main_button_wrapper{margin: auto;}
+
+#main_button{
+    padding:  20px 100px;
+    background-color: #1D83F6;
+    border: none;
+    border: black solid 3px;
+    /* Text Attribute */
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+    font-weight: 800;
+    letter-spacing: 0.125em;
+    font-size: 1.3em;
+    text-align: center;
+    /* Add block solid black box on button background (anim) */
+    animation: boxShadowMove 4s infinite;
+    
+}
+    @keyframes boxShadowMove{
+        0% {box-shadow: 5px 5px black;}
+        50% {box-shadow: 10px 10px black; background-color: #1D83F6;}
+        100% {box-shadow: 5px 5px black;} 
+    }
+
+#main_button:hover{
+    animation: onHoverBtn 10000s 1;
+    text-decoration: underline;
+}
+    @keyframes onHoverBtn{
+        0.005% {box-shadow: 10px 10px black; background-color: black; border: white solid 3px;}
+        100% {box-shadow: 10px 10px black; background-color: black;  border: white solid 3px;}
+    }
+
+
+#main_button:focus{
+    box-shadow: 10px 10px white; background-color: white; border: black solid 2px;
+    color: white;
+}
+
+
+
+/* Background Image */
+
+section#background img#code_block{
+    position: absolute;
+    top: 20%;
+    z-index: -1;
+    height: 75%;
+    width: 100%;
+    transform: scale(0.95);
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+
+img#blue_card{
+    position: absolute;
+    top: 10%;
+    height: 75%;
+    width: 100%;
+    z-index: -2;
+    transform: scale(0.90);
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+
+
+/* Footer */
+footer{
+   background-color: black;
+    padding: 25px 0;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+}
+ 
+/* Footer Newsletter Elements */
+
+
+#news_letter form{
+	position: relative;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 17px;
+    float: left;
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+	z-index: 50;
+}
+
+footer #newsletter_input{
+	position: relative;
+    border: solid white 1px;
+    background-color: transparent;
+    padding: 10px;
+    margin:  0 20px 0 10px;
+    color: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+    width: 300px;    
+}
+
+footer #newsletter_input:focus{
+   border: solid black 1px;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+}
+
+
+
+footer #newsletter_submit{
+    padding: 11px 15px;
+    background-color: #1D83F6;
+    border: none;
+    color: white;
+    font-family: 'Inconsolata', monospace !important;
+    border-radius: 5px;
+    width: 60px;
+}
+
+footer #newsletter_submit:hover{
+    animation: slideWidth 5s 1;
+    width: 100%;
+    -webkit-animation-name: ShineAnimation;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(.12,.89,.98,.47);
+    background-color: #1D8FFF;
+}
+        
+
+
+/* Email Mail Label */
+footer a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    font-size: 17px;
+    float: right;
+    padding-right: 15px;
+    
+}

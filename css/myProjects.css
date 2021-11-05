@@ -1,0 +1,219 @@
+/* 3D Parallax Effect https://youtu.be/M4fhjkPQ_gU */
+
+/* 1085 px width minimum */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+	overflow-x: hidden;
+    
+}
+/* Hidding Scrollbar on browser for website. */
+body{
+    background-color: white;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.selected{
+    opacity: 0.6;
+}
+
+
+/* Header Styling */ 
+header{
+    position: fixed;
+    top: 0;
+    background-color: black;
+    padding: 25px 0;
+    overflow: auto;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    z-index: 2;
+    opacity: 0.95;
+    width: 100%;
+    z-index: 99999;
+}
+
+section#header_nav a{
+    text-decoration: underline;
+    color: white;
+    padding: 0px 15px;
+    font-size: 17px;
+    float: left;   
+}
+
+section#header_nav a:hover{
+    opacity: 0.7;
+}
+
+section#header_nav a:nth-child(1){
+    padding-left: 25px;
+}
+
+section#header_icon img{
+    height: 18px;
+}
+
+section#header_icon nav{
+    display: flex;
+    float:right;   
+}
+
+section#header_icon a{
+    padding: 0px 15px;
+    align-items:baseline;
+    
+}
+section#header_icon a:hover{
+    opacity: 0.7;
+}
+section#header_icon a:nth-child(1){
+    padding-right: 9px;
+}
+
+
+
+div#content_fill{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+
+/* QR button block */
+div#qr_code_block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+div#qr_code_block p{
+    display: block;
+    font-family: 'Syne Mono', monospace !important;
+    font-size: 3em;
+}
+div#qr_code_block img{
+    width: 40%;;
+    margin: auto;
+    display: block;
+}
+div#qr_code_block a img{
+    width: 30%;
+}
+div#qr_code_block a img:hover{
+    opacity: 0.7;
+}
+
+
+
+/* Donate Section  */
+div#donate_label{
+    position: absolute;
+    bottom: 0;
+    
+}
+div#donate_label p {
+   font-family: 'Syne Mono', monospace !important;
+    font-size: 1em; 
+}
+div#donate_label p {
+   font-family: 'Syne Mono', monospace !important;
+    font-size: 1em; 
+}
+
+
+/* Footer */
+footer{
+   background-color: black;
+    padding: 25px 0;
+    overflow: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    
+}
+ 
+/* Footer Newsletter Elements */
+#news_letter form{
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 17px;
+    float: left;
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+footer #newsletter_input{
+    border: solid white 1px;
+    background-color: transparent;
+    padding: 10px;
+    margin:  0 20px 0 10px;
+    color: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+    width: 300px;    
+}
+
+footer #newsletter_input:focus{
+   border: solid black 1px;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+}
+
+
+footer #newsletter_submit{
+    padding: 11px 15px;
+    background-color: #1D83F6;
+    border: none;
+    color: white;
+    font-family: 'Inconsolata', monospace !important;
+    border-radius: 5px;
+    width: 60px;
+}
+
+footer #newsletter_submit:hover{
+    animation: slideWidth 5s 1;
+    width: 100%;
+    -webkit-animation-name: ShineAnimation;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(.12,.89,.98,.47);
+    background-color: #1D8FFF;
+}
+        
+
+/* Email Mail Label */
+footer a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    font-size: 17px;
+    float: right;
+    padding-right: 15px;
+    
+}

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.dialog{
+	position: fixed;
+	width: calc(25%);
+	height: calc(20%);
+	z-index: 9999999999999999;
+	margin: 20px;
+}
+.bottom{
+	bottom: 0;
+}
+.left{
+	left:0;
+}
+.right{
+	right: 0;
+}
+
+#cookie_div{
+	background-color: white;
+	padding: 10px;
+	border:dotted 2px black;
+	height: 90%;
+	opacity: 0.97;
+	
+}
+#cookie_notice_top{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-top: 10px;
+	height: 50%;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#cookie_notice_top img{
+	width: 50px;
+	padding-right: 15px;
+}
+#cookie_notice_top span{
+	font-size: 1.1em;
+	color: black;
+	font-family: "Inconsolata",  monospace !important;
+}
+
+#cookie_notice_bottom{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-around;
+	height: auto;
+}
+
+.cookie_btn{
+	padding: 10px 0px;
+	font-family: "Inconsolata",  monospace !important;
+	border:none;
+	background-color: white;
+	width: 42%;
+	border-radius: 4%;
+	font-size: 1em;
+}
+
+.cookie_btn:active{
+	opacity: 0.8;
+}
+
+.cookie_btn:hover{
+	opacity: 0.9;
+}
+
+
+.grey{
+	background-color: lightgrey;
+	color: black;
+	/* border:rgba(0,0,0, 0.4) 2px solid; */
+}
+
+.blue{
+	background-color: #1D83F6;
+	color: white;
+	/* border:rgba(0,0,0, 0.4) 2px solid; */
+}
+
+#dialog_cookie{
+	display: none;
+}
+
