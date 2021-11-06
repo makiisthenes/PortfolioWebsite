@@ -19,6 +19,8 @@ Extra things I did:
 
 - Used Adobe XD to iterate through various designs on each webpage of the site, and based css and webpage of the designs created.
 
+- Allowed users to login and add comments, with thier own username shown next to comment.
+
 ------
 ## Screenshots of Webpages
 
